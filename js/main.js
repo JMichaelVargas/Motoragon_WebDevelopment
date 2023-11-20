@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     var slideImg = document.getElementById("slideImg");
-    var images = ["img/img1.jpg", "img/img2.jpg", "img/img3.jpg"]; // Add more image URLs as needed
+    var images = ["img/img1.jpg", "img/img2.jpg", "img/img3.jpg"]; 
     var currentImageIndex = 0;
 
     function changeBackground() {
@@ -8,5 +8,5 @@ document.addEventListener("DOMContentLoaded", function () {
         slideImg.src = images[currentImageIndex];
     }
 
-    setInterval(changeBackground, 5000); // Change the background every 5 seconds (adjust as needed)
+    setInterval(changeBackground, 5000);
 });
