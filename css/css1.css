@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600;700&family=Roboto&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -41,32 +41,11 @@ body {
   margin-left: 20px;
 }
 
-.navbar-brand i {
-  color: #3af421;
-  margin-right: 3px;
-}
-
-.navbar-brand {
-  font-family: 'Pacifico', cursive;
-  font-size: 1.3rem;
-  transition: all 0.3s ease;
-  color: white;
-}
-
-.navbar .navbar-brand {
-  font-size: 23px;
-}
-
-.navbar-brand:hover {
-  color: #3af421;
-}
-
 .navbar-nav li a {
   color: #fff;
   text-decoration: none;
   padding: 20px 10px;
   display: inline-block;
-  border-radius: 25px;
   padding: 8px 15px;
   transition: 0.3s ease, color 0.3s ease;
   font-size: 15px;
@@ -220,7 +199,7 @@ body {
   color: white;
   background-color: transparent;
   border-color: #3af421;
-  border-radius: 25px;
+  border-radius: 50px;
   padding: 8px 15px;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
@@ -280,15 +259,19 @@ body {
   width: 60%;
   text-align: center;
   color: #fff;
+  margin-bottom: 100px;
 }
 
 .content h1{
-  font-size: 60px;
+  font-size: 75px;
+  font-weight: 600;
+  font-family: 'Playfair Display', serif;
 }
-.content h3{
+.content h4{
   width: 80%;
   margin: 20px auto 100px;
   font-weight: 100;
+  font-family: 'Roboto', sans-serif;
 }
 
 /*CONTACT SECTION*/
@@ -320,7 +303,6 @@ input, textarea{
 }
 .contact_form_container{
   background: #2a252e;
-  font-family: 'Poppins', sans-serif;
   color: white;
   padding: 20px;
   border-radius: 0 20px 20px 0;
@@ -345,13 +327,11 @@ input, textarea{
 .contact_details_text{
   margin: 5px 0;
   color: white;
-  font-family: 'Poppins', sans-serif;
   font-size: 20px;
 }
 .contact_details_icon{
   margin: 5px 0;
   color: #3af421;
-  font-family: 'Poppins', sans-serif;
   font-size: 20px;
 }
 .contact_socials{
@@ -377,7 +357,6 @@ input, textarea{
   width: 100%;
   height: 40px;
   font-size: 15px;
-  font-family: 'Poppins', sans-serif;
   padding: 10px;
   background: none;
   border: 1px solid white;
@@ -396,7 +375,6 @@ textarea{
   width: 100%;
   padding: 10px;
   font-size: 15px;
-  font-family: 'Poppins', sans-serif;
   background: none;
   border: 1px solid white;
   resize: none;
@@ -416,7 +394,6 @@ textarea{
   width: 130px;
   height: 40px;
   font-size: 15px;
-  font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
   border-radius: 20px;
   cursor: pointer;
@@ -425,6 +402,31 @@ textarea{
 .send-btn:hover{
   color: #fe0007;
 }
+
+/* Footer Section */
+footer {
+  text-align: center;
+  color: #fff;
+  padding: 25px 0;
+  background-color: #000;
+  font-size: 15px;
+}
+
+footer .copyright {
+  margin-bottom: 0.3rem;
+}
+
+footer .credits {
+  margin-bottom: 0;
+}
+
+footer .credits a {
+  color: #fff;
+}
+
+.JMV{
+  color: #3af421;
+} 
 
 
 /* RESPONSIVE SECTION */
