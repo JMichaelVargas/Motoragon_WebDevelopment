@@ -234,7 +234,18 @@ header {
     margin: auto;
     overflow: hidden;
     padding: 20px;
-    height: 80vh;
+    height: 80vh; 
+    background-color: #f8f8f8; 
+    border-radius: 12px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); 
+}
+
+.container i {
+    font-size: 2em; 
+    color: #333; 
+    display: block; 
+    margin: 20px auto; 
+    text-align: center;
 }
 
 #about-section {
@@ -243,23 +254,27 @@ header {
 
 #about-section img {
     float: left;
-    width: 300px;
-    height: 200px;
+    width: 350px;
+    height: 340px;
     margin-right: 20px;
     border-radius: 8px;
+    object-fit: cover; 
 }
 
 #about-section p {
     text-align: justify;
+    color: #555; 
 }
 
 #reviews-section p {
     text-align: justify;
+    color: #555; 
 }
 
 h2 {
     color: #333;
 }
+
 
 .testimonials-section{
 	width: 100%;
@@ -296,7 +311,7 @@ h2 {
 	margin-right: 20px;
 }
 .test-card-body .quote h2{
-	color: #3af421;
+	color: #fff;
 }
 .test-card-body p{
 	margin: 10px 0px 15px;
@@ -364,7 +379,7 @@ h2 {
 .owl-nav .owl-prev i:hover,
 .owl-nav .owl-next i:hover{
 	background-color: #3af421 !important;
-	color: #e9e9e9;
+	color: #fe0007;
 }
 .owl-dots{
 	margin-top: 15px;
@@ -379,6 +394,34 @@ h2 {
 
 
 /* Mobile Responsive  */
+/* RESPONSIVE SECTION */
+@media(min-width: 576px) {
+    .cart-icon {
+        font-size: 1.6rem;
+    }
+    body{
+        font-size: 1.1rem;
+    }
+  }
+  
+  @media(max-width: 576px) {
+    .contact_section {
+      padding: 1rem 0;
+    }
+    .contact_container{
+      margin: 10px;
+    }
+    .contact_details_text{
+      font-size: 17px;
+    }
+    .contact_details_icon{
+      font-size: 17px;
+    }
+    .social_icons{
+      font-size: 20px;
+    }
+  }
+  
 @media only screen and (max-width: 768px) {
     header {
         padding: 0.5em;
@@ -387,7 +430,7 @@ h2 {
     .container {
         width: 90%;
         padding: 10px;
-        height: 115vh;
+        height: 125vh;
     }
 
     #about-section img {
