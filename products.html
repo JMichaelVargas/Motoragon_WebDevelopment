@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <!-- CSS File-->
+    <link rel="stylesheet" href="css/products.css">
+    <!-- Title section -->
+    <title>Motoragon</title>
+    <!-- Font -->   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap" rel="stylesheet">
+    <!-- FONTAWESOME CSS ICON-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body > 
+    <!-- navbar section-->
+    <section>
+        <nav class="navbar navbar-expand-lg">
+            <!-- container -->
+            <div class="container-fluid px-0">
+                <a href="#home" class="logo">
+                    <img src="img/motoragon-transformed.png" alt="JMV">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="navbar-toggler">
+                    <input type='checkbox' id='toggle-menu' />
+                    <label type="button" class='toggle-btn' for='toggle-menu'>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </label>
+                </button>
+                <div class="collapse navbar-collapse">
+                    <!-- ms-auto -->
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">ABOUT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#products">PRODUCTS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">CONTACT</a>
+                        </li>
+                        </li>
+                    </ul>
+                    <a class="nav-link cart-icon" href=""><i class="fa-solid fa-cart-plus"></i></a>
+                    <a class="nav-link" href=""><button class="btn btn-outline-success" type="submit">Sign Up</button></a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- <a class="navbar-brand" href="#"><i class="fa-sharp fa-solid fa-graduation-cap"></i>JMV</a> -->
+                    <div class="modal-body">
+                        <!-- ms-auto -->
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link menu-link" href="#home"><i class="fas fa-home"></i> HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link menu-link" href="about.html"><i class="fa-solid fa-user"></i></i> ABOUT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link menu-link" href="#products"><i class="fa-solid fa-user-tag"></i> PRODUCTS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link menu-link" href="#contact"><i class="fa-solid fa-user-tag"></i> CONTACT</a>
+                            </li>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><label
+                        for='toggle-menu'>Close</label></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="products_section">
+        <div class="products_content">
+            <h1 class="title_prod">Products</h1>
+            <input class="radio" id="new" name="group" type="radio" checked>
+            <input class="radio" id="mtb" name="group" type="radio">
+            <input class="radio" id="kiddie" name="group" type="radio">
+            <div class="prod_selection_container">
+                <label id="new-tab" for="new">New Arrival</label>
+                <label id="mtb-tab" for="mtb">Mountain Bikes</label>
+                <label id="kiddie-tab" for="kiddie">Kiddie Bikes</label>
+            </div>
+            <div class="prod_container">
+                <div class="card_container" id="new-cards">
+                    <div class="cards_prod">
+                        <div class="card_img">
+                            <img src="img/gtforce.png" alt="GT Force 3.0" class="new_pic">
+                        </div>
+                        <div class="card_details_container">
+                            <div class="card_details">
+                                <div class="card_title">GT Force 3.0 26r</div>
+                                <div class="card_mini_title">&#8369 39,000</div>
+                                <p class="card_desc">
+                                    New Arrival Mountain Bike 26r
+                                </p>
+                            </div>
+                            <div class="addcart">
+                                <button class="addcart-btn" type="button">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards_prod">
+                        <div class="card_img">
+                            <img src="img/simontiktokbeat27.png" alt="Simon Tiktok Beat" class="new_pic">
+                        </div>
+                        <div class="card_details_container">
+                            <div class="card_details">
+                                <div class="card_title">Simon Tiktok Beat 27.5</div>
+                                <div class="card_mini_title">&#8369 7795</div>
+                                <p class="card_desc">
+                                    New Arrival Mountain Bike 27.5r
+                                </p>
+                            </div>
+                            <div class="addcart">
+                                <button class="addcart-btn" type="button">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards_prod">
+                        <div class="card_img">
+                            <img src="img/simontrail27.png" alt="Simon Trail" class="new_pic">
+                        </div>
+                        <div class="card_details_container">
+                            <div class="card_details">
+                                <div class="card_title">Simon Trail 27.5</div>
+                                <div class="card_mini_title">&#8369 7995</div>
+                                <p class="card_desc">
+                                    New Arrival Mountain Bike 27.5r
+                                </p>
+                            </div>
+                            <div class="addcart">
+                                <button class="addcart-btn" type="button">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards_prod">
+                        <div class="card_img">
+                            <img src="img/revelcanyon29.png" alt="Revel Canyon 29" class="new_pic">
+                        </div>
+                        <div class="card_details_container">
+                            <div class="card_details">
+                                <div class="card_title">Revel Canyon 29</div>
+                                <div class="card_mini_title">&#8369 9995</div>
+                                <p class="card_desc">
+                                    New Arrival Mountain Bike 29r
+                                </p>
+                            </div>
+                            <div class="addcart">
+                                <button class="addcart-btn" type="button">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card_container" id="mtb-cards">
+                    <div class="cards_prod">
+                        <div class="card_img">
+                            <img src="img/shunma26.png" alt="Shunma 26" class="mtb_pic">
+                        </div>
+                        <div class="card_details_container">
+                            <div class="card_details">
+                                <div class="card_title">Shunma 26 Lady</div>
+                                <div class="card_mini_title">&#8369 2500</div>
+                                <p class="card_desc">
+                                    Mountain Bike 26r
+                                </p>
+                            </div>
+                            <div class="addcart">
+                                <button class="addcart-btn" type="button">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards_prod">
+                        <div class="card_img">
+                            <img src="img/vipernova.png" alt="Viper Nova Lady" class="mtb_pic">
+                        </div>
+                        <div class="card_details_container">
+                            <div class="card_details">
+                                <div class="card_title">Viper Nova Lady</div>
+                                <div class="card_mini_title">&#8369 12495</div>
+                                <p class="card_desc">
+                                    Mountain Bike 26r 
+                                </p>
+                            </div>
+                            <div class="addcart">
+                                <button class="addcart-btn" type="button">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards_prod">
+                        <div class="card_img">
+                            <img src="img/goodvibes.png" alt="Simon Good Vibes" class="mtb_pic">
+                        </div>
+                        <div class="card_details_container">
+                            <div class="card_details">
+                                <div class="card_title">Simon Good Vibes</div>
+                                <div class="card_mini_title">&#8369 4995</div>
+                                <p class="card_desc">
+                                    Mountain Bike 27.5r 
+                                </p>
+                            </div>
+                            <div class="addcart">
+                                <button class="addcart-btn" type="button">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards_prod">
+                        <div class="card_img">
+                            <img src="img/viperrebel.png" alt="Viper Rebel" class="mtb_pic">
+                        </div>
+                        <div class="card_details_container">
+                            <div class="card_details">
+                                <div class="card_title">Viper Rebel</div>
+                                <div class="card_mini_title">&#8369 12,500</div>
+                                <p class="card_desc">
+                                    Mountain Bike 27.5r
+                                </p>
+                            </div>
+                            <div class="addcart">
+                                <button class="addcart-btn" type="button">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards_prod">
+                        <div class="card_img">
+                            <img src="img/viperflare.png" alt="Viper Flare" class="mtb_pic">
+                        </div>
+                        <div class="card_details_container">
+                            <div class="card_details">
+                                <div class="card_title">Viper Flare</div>
+                                <div class="card_mini_title">&#8369 11,500</div>
+                                <p class="card_desc">
+                                    Mountain Bike 27.5r
+                                </p>
+                            </div>
+                            <div class="addcart">
+                                <button class="addcart-btn" type="button">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards_prod">
+                        <div class="card_img">
+                            <img src="img/vipertriad27.png" alt="Viper Triad" class="mtb_pic">
+                        </div>
+                        <div class="card_details_container">
+                            <div class="card_details">
+                                <div class="card_title">Viper Triad 27.5</div>
+                                <div class="card_mini_title">&#8369 16,995</div>
+                                <p class="card_desc">
+                                    Mountain Bike 27.5r
+                                </p>
+                            </div>
+                            <div class="addcart">
+                                <button class="addcart-btn" type="button">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card_container" id="kiddie-cards">
+                    <div class="cards_prod">
+                        <div class="card_img">
+                            <img src="img/kiddie.png" alt="Kiddie" class="kiddies_pic">
+                        </div>
+                        <div class="card_details_container">
+                            <div class="card_details">
+                                <div class="card_title">Kiddie</div>
+                                <div class="card_mini_title">&#8369 1750</div>
+                                <p class="card_desc">
+                                    Bike for kids
+                                </p>
+                            </div>
+                            <div class="addcart">
+                                <button class="addcart-btn" type="button">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--JavaScript Section-->   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="js\main.js"></script>
+</body>
+      <!-- Footer Section -->
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="copyright-box">
+                <p class="copyright">&copy; Copyright <span class="JMV"><strong>Motoragon 2023</strong></span>. All Rights Reserved</p>
+                <div class="credits">
+                  Thank you for shopping with us, see us again
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+</html>

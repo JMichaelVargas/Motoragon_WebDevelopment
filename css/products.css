@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600;700&family=Roboto&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  height: 100vh;
+  background-color:#fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.navbar {
+  background: black;
+  min-height: 8vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  position: sticky;
+  box-sizing: border-box;
+}
+
+.navbar .navbar-brand a {
+  padding: 1rem 0;
+  display: block;
+  text-decoration: none;
+}
+
+.logo img {
+  max-height: 65px;
+  margin-left: 20px;
+}
+
+.navbar-nav li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 20px 10px;
+  display: inline-block;
+  padding: 8px 15px;
+  transition: 0.3s ease, color 0.3s ease;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.navbar-nav li a:hover {
+  background-color: #3af421;
+  color: #fe0007;
+}
+
+.navbar .navbar-toggler {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.navbar .toggle-btn {
+  cursor: pointer;
+  position: relative;
+  top: 5px;
+  z-index: 1100;
+}
+
+.scroll-indicator-container{
+  width: 100%;
+  height: 5px;
+}
+.scroll-indicator-bar{
+  background: lightseagreen;
+  width: 50%;
+  height: 100%;
+}
+
+.nav-link{
+  margin-right: 20px;
+  color: white;
+}
+
+.cart-icon:hover {
+  background-color: transparent;
+  color: white;
+}
+
+/*Responsive Mobile View Button for Navbar*/
+.navbar .navbar-toggler {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.navbar .toggle-btn {
+  cursor: pointer;
+  position: relative;
+  top: 5px;
+  z-index: 1100;
+}
+
+.navbar .toggle-btn .bar {
+  width: 25px;
+  height: 3px;
+  margin: 7px 0 7px auto;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background-color: #3af421;
+}
+
+.navbar .toggle-btn .bar:nth-child(2) {
+  width: 35px;
+}
+
+.navbar #toggle-menu {
+  display: none;
+}
+
+.navbar #toggle-menu:checked+label.toggle-btn .bar:nth-child(2) {
+  -webkit-transform: translateX(50px);
+  -ms-transform: translateX(50px);
+  transform: translateX(50px);
+  opacity: 0;
+}
+
+.navbar #toggle-menu:checked+label.toggle-btn .bar:nth-child(1) {
+  -webkit-transform: translateY(12px) rotate(45deg);
+  -ms-transform: translateY(12px) rotate(45deg);
+  transform: translateY(12px) rotate(45deg);
+}
+
+.navbar #toggle-menu:checked+label.toggle-btn .bar:nth-child(3) {
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+  -ms-transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.modal-dialog {
+  margin-left: -3px;
+  margin-top: -3px;
+  width: 85%;
+}
+
+.modal-dialog .modal-content {
+  background-color: #2a252e;
+}
+
+.modal-dialog .modal-header,
+.modal-dialog .modal-footer {
+  border: none;
+}
+
+.modal-dialog .modal-header img {
+  max-height: 40px;
+}
+
+.modal-dialog .modal-body {
+  padding-top: 65px;
+  background-color: black;
+}
+
+.modal-dialog .nav-link {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.modal-dialog .nav-link i {
+  margin-right: 10px;
+  color: #3af421;
+}
+
+.dropdown-menu {
+  background-color: #2a252e;
+  color: #3af421;
+}
+
+.dropdown-item {
+  color: white;
+}
+
+.modal-dialog .btn-secondary {
+  color: white;
+  background-color: #3af421;
+  border: none;
+}
+
+.btn {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background-color: transparent;
+    border-color: #3af421;
+    border-radius: 50px;
+    padding: 8px 15px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #3af421;
+    color: #fe0007;
+  }
+  
+  .btn:focus,
+  .btn:active {
+    box-shadow: none;
+    outline: none;
+  }
+  
+  .btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+
+/*PRODUCTS SECTION*/
+.products_section{
+    background: #F5F5F5;
+    padding: 2rem 0;
+}
+.products_content{
+    background-color: white;
+    margin-left: 7%;
+    margin-right: 7%;
+}
+.prod_container{
+    padding: 4rem 0rem;
+}
+.title_prod{
+    padding: 3rem 0px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    color: #fe0007;
+}
+.prod_selection_container{
+    margin-bottom: 1rem;
+    color: #c0c0c0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+.prod_selection_container label:hover{
+    color: #fe0007;
+    transition: all 0.4s ease-in-out;
+}
+.card_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    display: none;
+    animation: fadein 0.8s;
+}
+@keyframes fadein{
+    from{
+        opacity: 0;
+        transform: translateY(5%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+.cards_prod{
+    background-color: white;
+    height: 450px;
+    width: 335px;
+    box-shadow: 0 0 7px #dbdbdb;
+    display: grid;
+    align-items: center;
+    transition: 0.2s ease-in-out;
+}
+.cards_prod:hover{
+    box-shadow: 0 0 7px 2px #cccccc;
+}
+.card_img{
+    display: grid;
+    justify-content: center;
+}
+.new_pic{
+    padding-top: 5px;
+    width: 290px;
+    height: 221px;
+}
+.mtb_pic{
+    padding-top: 5px;
+    width: 290px;
+    height: 221px;
+}
+.kiddies_pic{
+    padding-top: 5px;
+    width: 290px;
+    height: 221px;
+}
+.card_details_container{
+    padding: 0 1.3rem;
+}
+.card_title{
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    font-style: italic;
+}
+.card_mini_title{
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    color: #fe0007;
+}
+.card_desc{
+    padding: 0.5rem 0rem;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    text-align: left;
+    font-size: 17px;
+    margin: 0;
+}
+.addcart{
+    float: right;
+}
+.addcart-btn{
+    color: white;
+    padding: 7px 20px;
+    background: #fe0007;
+    border: none;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 15px;
+    transition: 0.3s;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.5s ease-in-out;
+}
+.addcart-btn:hover{
+    background: #a70006;
+}
+.radio{
+    display: none;
+}
+#new:checked ~ .prod_container #new-cards,
+#mtb:checked ~ .prod_container #mtb-cards,
+#kiddie:checked ~ .prod_container #kiddie-cards{
+    display: flex;
+
+}
+
+#new:checked ~ .prod_selection_container #new-tab,
+#mtb:checked ~ .prod_selection_container #mtb-tab,
+#kiddie:checked ~ .prod_selection_container #kiddie-tab{
+    color: #fe0007;
+    transition: 0.4s ease-in-out;
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    color: #fff;
+    padding: 25px 0;
+    background-color: #000;
+    font-size: 15px;
+  }
+  
+  footer .copyright {
+    margin-bottom: 0.3rem;
+  }
+  
+  footer .credits {
+    margin-bottom: 0;
+  }
+  
+  footer .credits a {
+    color: #fff;
+  }
+  
+  .JMV{
+    color: #3af421;
+  } 
+
+
+/* RESPONSIVE SECTION */
+@media(min-width: 576px) {
+    body {
+        font-size: 1.6rem;
+    }
+}
+
+@media(max-width: 576px) {
+    .title_prod{
+        padding: 2rem 0px;
+    }
+    .products_content{
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    .prod_selection_container{
+        gap: 1.5rem;
+        font-size: 15px;
+    }
+    .prod_container{
+        padding: 2rem 0rem;
+    }
+    .contact_details_icon{
+      font-size: 17px;
+    }
+    .social_icons{
+      font-size: 20px;
+    }
+  }
