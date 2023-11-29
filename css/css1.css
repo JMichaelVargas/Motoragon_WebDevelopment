@@ -404,6 +404,7 @@ textarea{
   color: #fe0007;
 }
 
+
 /* Footer Section */
 footer {
   text-align: center;
@@ -428,6 +429,10 @@ footer .credits a {
 .JMV{
   color: #3af421;
 } 
+
+.icon-container{
+  background-color: lightgray;
+}
 
 
 /* RESPONSIVE SECTION */
