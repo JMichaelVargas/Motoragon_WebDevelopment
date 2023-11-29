@@ -371,7 +371,6 @@ h2 {
 	padding: 10px !important;
 	border-radius: 50%;
 	font-size: 18px !important;
-	background-color: #3af421 !important;
 	color: var(--primary-clr);
 	cursor: pointer;
 	transition: 0.4s;
@@ -384,14 +383,6 @@ h2 {
 .owl-dots{
 	margin-top: 15px;
 }
-.owl-dots .owl-dot span{
-	background-color: #434753 !important;
-	padding: 6px !important;
-}
-.owl-dot.active span{
-	background-color: #3af421 !important;
-}
-
 
 /* Mobile Responsive  */
 /* RESPONSIVE SECTION */
