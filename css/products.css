@@ -90,6 +90,11 @@ body {
   color: white;
 }
 
+.logo img {
+  max-height: 65px;
+  margin-left: 20px;
+}
+
 /*Responsive Mobile View Button for Navbar*/
 .navbar .navbar-toggler {
   border: none !important;
