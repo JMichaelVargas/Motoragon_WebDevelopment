@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <!-- CSS File-->
+    <link rel="stylesheet" href="css/login.css">
+    <!-- Title section -->
+    <title>Motoragon</title>
+    <!-- Font -->   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <!-- FONTAWESOME CSS ICON-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!-- *******  Owl Carousel Links  ******* -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+</head>
+<body>
+  <div class="login_section">
+    <div class="login_container">
+        <div class="login_content">
+            <div class="signup_title">Log In</div>
+            <input class="textbox" type="text" id="email" name="email" placeholder="E-mail" />
+            <input class="textbox" type="password" id="password" name="password" placeholder="Password" /><br>
+            <input class="login-btn" type="submit" id="login" name="login_submit" value="Log In" />
+
+            <p class="login_text">Don't have an account? <a class ="login_link" href="signup.html">Sign Up Here.</a></p>
+            <p class="login_text"><a class ="login_link" href="index.html">Return to Home.</a></p>
+        </div>
+    </div>
+  </div>
+
+</body>
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
+    import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-database.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-analytics.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyDAwlRuUI6XE9yJqh30UFwbfF7dusvkrfg",
+      authDomain: "authentication-8a811.firebaseapp.com",
+      databaseURL: "https://authentication-8a811-default-rtdb.firebaseio.com",
+      projectId: "authentication-8a811",
+      storageBucket: "authentication-8a811.appspot.com",
+      messagingSenderId: "421435285777",
+      appId: "1:421435285777:web:912a5aabaceca6fb54ecb0",
+      measurementId: "G-BFJ5J6MW02"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+    const analytics = getAnalytics(app);
+    const auth = getAuth();
+
+    signUp.addEventListener('click', (e) => {
+        
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        var username = document.getElementById('username').value;
+
+        createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+        // Signed up 
+            const user = userCredential.user;
+            set(ref(database, 'users/' + user.uid),{
+                    username: username,
+                    email: email
+            })
+            alert('User created!');
+        // ...
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            
+            alert(errorMessage);
+        // ..
+        });
+    });
+
+    login.addEventListener('click',(e) => {
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+            // Signed in 
+                console.log('User signed in successfully');
+                const user = userCredential.user;
+
+            
+            
+            const dt = new Date();
+            update(ref(database, 'users/' + user.uid),{
+                    last_login: dt,
+            })
+
+            alert('User Logged in!');
+            
+            window.location.replace('index.html');
+
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+
+            alert(errorMessage);
+        });
+    });
+
+    const user = auth.currentUser;
+    onAuthStateChanged(auth, (user) => {
+    if (user) {
+        // User is signed in, see docs for a list of available properties
+        // https://firebase.google.com/docs/reference/js/auth.user
+        const uid = user.uid;
+        // ...
+    } else {
+        // User is signed out
+        // ...
+    }
+    });
+
+    logout.addEventListener('click', (e) => {
+        signOut(auth).then(() => {
+        // Sign-out successful.
+            alert('User logged out');
+        }).catch((error) => {
+        // An error happened.
+        });
+    });
+  </script>
+</html>
