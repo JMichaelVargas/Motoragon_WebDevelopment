@@ -84,13 +84,13 @@
 
         function AssignImgsToFilesArray(thefiles){
             let num = Files.length + thefiles.length;
-            let looplim = (num <=10) ? thefiles.length : (10-Files.length)
+            let looplim = (num <=1) ? thefiles.length : (1-Files.length)
 
             for (let i = 0; i < looplim; i++) {
                 Files.push(thefiles[i]);
             }
 
-            if(num>10) alert("Maximum 10 images are allowed!");
+            if(num>1) alert("Maximum 1 image are allowed!");
         }
 
         function CreateImgTags(){
