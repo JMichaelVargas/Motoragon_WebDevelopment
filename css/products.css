@@ -706,6 +706,6 @@ footer {
 }
 
 .cart-container #checkout-button:hover {
-  background-color: #3af421;
-  color: #fe0007;
+  background-color: #2ec01b;
+  color: white;
 }
