@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600;700&family=Roboto&display=swap');
+/*Colors
+green: #3af421
+darkgreen: #2ec01b
+red: #fe0007
+*/
 * {
   margin: 0;
   padding: 0;
@@ -53,10 +58,10 @@ body {
 }
 
 .navbar-nav li a:hover {
-  background-color: #3af421;
-  color: #fe0007;
+  background-color: #2ec01b;
+  color: white;
+  border-radius: 5px;
 }
-
 .navbar .navbar-toggler {
   border: none !important;
   outline: none !important;
@@ -216,8 +221,7 @@ body {
   }
   
   .btn:hover {
-    background-color: #3af421;
-    color: #fe0007;
+    background-color: #2ec01b;
   }
   
   .btn:focus,
@@ -389,8 +393,8 @@ h2 {
 }
 .owl-nav .owl-prev i:hover,
 .owl-nav .owl-next i:hover{
-	background-color: #3af421 !important;
-	color: #fe0007;
+	background-color: #2ec01b !important;
+	color: white;
 }
 .owl-dots{
 	margin-top: 15px;
@@ -435,6 +439,7 @@ h2 {
   display: block;
   line-height: 23px;
   transition: all .3s;
+  text-decoration: none;
 }
 
 .footer .footer-widget ul li a::before {
@@ -445,7 +450,7 @@ h2 {
 }
 
 .footer .footer-widget ul li a:hover {
-  color: #fe0007;
+  color: white;
 }
 
 .footer .footer-widget ul li a:hover::before {
@@ -484,8 +489,9 @@ h2 {
 }
 
 .footer .social a:hover {
-  color: #fe0007;
-  border-color: #fe0007;
+  color: white;
+  background-color: #2ec01b;
+  border-color: #2ec01b;
 }
 
 .footer .payment {

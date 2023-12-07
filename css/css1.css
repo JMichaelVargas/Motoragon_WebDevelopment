@@ -53,8 +53,9 @@ body {
 }
 
 .navbar-nav li a:hover {
-  background-color: #3af421;
-  color: #fe0007;
+  background-color: #2ec01b;
+  color: white;
+  border-radius: 5px;
 }
 
 .navbar .navbar-toggler {
@@ -217,8 +218,7 @@ body {
 }
 
 .btn:hover {
-  background-color: #3af421;
-  color: #fe0007;
+  background-color: #2ec01b;
 }
 
 .btn:focus,
@@ -455,6 +455,7 @@ textarea{
   line-height: 23px;
   transition: all .3s;
   font-size: 17px;
+  text-decoration: none;
 }
 
 .footer .footer-widget ul li a::before {
@@ -465,7 +466,7 @@ textarea{
 }
 
 .footer .footer-widget ul li a:hover {
-  color: #fe0007;
+  color: white;
 }
 
 .footer .footer-widget ul li a:hover::before {
@@ -504,8 +505,9 @@ textarea{
 }
 
 .footer .social a:hover {
-  color: #fe0007;
-  border-color: #fe0007;
+  color: white;
+  background-color: #2ec01b;
+  border-color: #2ec01b;
 }
 
 .footer .payment {

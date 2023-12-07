@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600;700&family=Roboto&display=swap');
+/*Colors
+green: #3af421
+darkgreen: #2ec01b
+red: #fe0007
+*/
 * {
   margin: 0;
   padding: 0;
@@ -53,8 +58,9 @@ body {
 }
 
 .navbar-nav li a:hover {
-  background-color: #3af421;
-  color: #fe0007;
+  background-color: #2ec01b;
+  color: white;
+  border-radius: 5px;
 }
 
 .navbar .navbar-toggler {
@@ -69,7 +75,6 @@ body {
   top: 5px;
   z-index: 1100;
 }
-
 .scroll-indicator-container{
   width: 100%;
   height: 5px;
@@ -220,8 +225,7 @@ body {
   }
   
   .btn:hover {
-    background-color: #3af421;
-    color: #fe0007;
+    background-color: #2ec01b;
   }
   
   .btn:focus,
@@ -299,6 +303,7 @@ body {
     display: grid;
     align-items: center;
     transition: 0.2s ease-in-out;
+    border-radius: 2px;
 }
 .cards_prod:hover{
     box-shadow: 0 0 7px 2px #cccccc;
@@ -535,6 +540,7 @@ footer {
     line-height: 23px;
     transition: all .3s;
     font-size: 17px;
+    text-decoration: none;
   }
   
   .footer .footer-widget ul li a::before {
@@ -545,7 +551,7 @@ footer {
   }
   
   .footer .footer-widget ul li a:hover {
-    color: #fe0007;
+    color: white;
   }
   
   .footer .footer-widget ul li a:hover::before {
@@ -584,8 +590,9 @@ footer {
   }
   
   .footer .social a:hover {
-    color: #fe0007;
-    border-color: #fe0007;
+    color: white;
+    background-color: #2ec01b;
+    border-color: #2ec01b;
   }
   
   .footer .payment {
@@ -613,7 +620,7 @@ footer {
   .footer .payment-security {
     text-align: right;
   }
-  
+
   @media (max-width: 768.98px) {
     .footer .payment-method {
         margin-bottom: 15px;
